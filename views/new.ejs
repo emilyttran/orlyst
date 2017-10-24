@@ -1,0 +1,44 @@
+<% include partials/header %>
+<div class="container">
+    <div class="row">
+        <h1 style="text-align: center">What are you selling?</h1>
+        <div style="width: 30%; margin: 25px auto;">
+            <form action="/sellerItems" method="POST">
+                <div class="form-group">
+                    <input class="form-control" type="text" name="name" placeholder="Name">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="image" placeholder="Image URL">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="price" placeholder="Price">
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="text" name="description" placeholder="Description">
+                </div>
+                <div class="form-group">
+                    <!-- Single button -->
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-default dropdown-toggle btn-block" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Category... <span class="caret"></span>
+                      </button>
+                      <ul class="dropdown-menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li><a href="#">Separated link</a></li>
+                      </ul>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-lg btn-warning btn-block">Submit!</button>
+                </div>
+            </form>
+            <a href="/items">Go Back</a>
+        </div>
+    </div>
+</div>
+<% include partials/footer %>
+
+

@@ -1,0 +1,35 @@
+<% include partials/header %>
+
+<a href="/userDashboard"><button class="btn btn-warning"><span class="glyphicon glyphicon-chevron-left"></span>Go Back</button></a>
+
+<div class="container text-center">
+    <header class="jumbotron">
+        <div class="container">
+            <h1>Your selling items </h1>
+        </div>
+        <a href="/sellerItems/new"><div class="btn btn-warning"> Add new item </div></a>
+    </header>
+    <div class="row text-center" style="display:flex; flex-wrap: wrap;">
+        <% items.forEach(function(item){ %>
+                <div class="col-md-3 col-sm-6">
+                    <a href="/sellerItems/<%= item._id %>">
+                        <div class="thumbnail">
+                           <img src="<%= item.image %>">
+                           <div class="caption">
+                               <h4><%= item.name %></h4>
+                           </div>
+                           <div>
+                               <h6><%= item.description %></h6>
+                               <h2>$<%= item.price %></h2>
+                           </div>
+                        </div>
+                    </a>
+                </div>
+        <% }); %>
+    </div>
+</div>
+
+
+
+    
+<% include partials/footer %> 

@@ -1,0 +1,43 @@
+<% include partials/header %>
+<a href="/sellerItems"><button class="btn btn-warning"><span class="glyphicon glyphicon-chevron-left"></span>Go Back</button></a>
+
+<div class="container text-center">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 style="color: orange" class="page-header">
+                    <%= item.name %><br>
+                    <small>
+                        Seller:
+                        <em> <%= item.author.username %> </em>
+                    </small>
+                </h1>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-md-8">
+                <img class="img-responsive" src="<%= item.image %>" alt="">
+            </div>
+
+            <div class="col-md-4">
+                <h3 style="text-align:center; color: orange">Price</h3>
+                <div> $
+                <%= item.price %>
+                </div>
+                <h3 style="text-align:center; color: orange">Product Description</h3>
+                <p>
+                    <%= item.description %>
+                </p>
+                
+                <a href="/sellerItems/:id/edit"><button class="btn btn-lg btn-warning">Edit Item</button></a>
+                
+           </div>
+
+        </div>
+        </div>
+        <hr>
+    </div>
+    
+
+
+<% include partials/footer %>

@@ -1,0 +1,24 @@
+<% include partials/header %>
+
+
+<div class="container">
+    <div class="row">
+        <div style="width: 30%; margin: 25px auto;">
+                <h2>Contact Seller Form</h2> 
+                <form action="/contactSeller" method="post">
+                    <div class="form-group">
+                        <input class="form-control" type="email" name="email" placeholder="Email">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="phone" placeholder="Phone Number">
+                    </div>
+                    <div class="form-group">
+                    <button class="btn btn-lg btn-warning btn-block">Contact Seller</button>
+                    </div>
+                </form>
+            <a href="/login">Go Back</a>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>
